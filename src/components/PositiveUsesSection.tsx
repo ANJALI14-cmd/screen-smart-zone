@@ -11,35 +11,35 @@ export const PositiveUsesSection = () => {
       title: "Enhanced Communication",
       icon: MessageCircle,
       brief: "Stay connected with family and friends worldwide through calls, texts, and video chats.",
-      detailed: "Mobile phones have revolutionized communication by enabling instant global connectivity. Video calls bridge geographical gaps, messaging apps facilitate quick exchanges, and social platforms help maintain relationships. Emergency communication capabilities have saved countless lives, allowing people to call for help in critical situations. Group chats keep families connected, and translation apps break down language barriers, fostering international relationships and understanding."
+      detailed: "Mobile phones enable instant global connectivity through video calls, messaging apps, and social platforms. Emergency communication capabilities save lives by allowing quick calls for help. Translation apps break language barriers, fostering international relationships."
     },
     {
       id: "navigation",
       title: "GPS Navigation",
       icon: MapPin,
       brief: "Never get lost with real-time GPS navigation and location services.",
-      detailed: "GPS technology in smartphones has transformed how we navigate the world. Real-time traffic updates help avoid congestion, saving time and fuel. Location sharing ensures safety during travels, while offline maps work even without internet. Emergency services can locate people in distress, and ride-sharing apps have revolutionized transportation. Geofencing helps parents monitor children's whereabouts, and location-based services provide relevant local information and recommendations."
+      detailed: "GPS technology transforms navigation with real-time traffic updates, saving time and fuel. Emergency services can locate people in distress, while ride-sharing apps revolutionize transportation. Location-based services provide relevant local information."
     },
     {
       id: "health",
       title: "Health Monitoring",
       icon: Heart,
       brief: "Track fitness, monitor health metrics, and access medical information.",
-      detailed: "Health apps transform smartphones into personal wellness assistants. Step counters encourage physical activity, heart rate monitors track cardiovascular health, and medication reminders ensure proper treatment adherence. Telemedicine apps provide remote medical consultations, while health record apps organize medical information. Mental health apps offer guided meditation and stress management, and emergency medical ID features provide critical information to first responders during emergencies."
+      detailed: "Health apps transform smartphones into wellness assistants with step counters, heart rate monitors, and medication reminders. Telemedicine provides remote consultations, while emergency medical ID features help first responders."
     },
     {
       id: "productivity",
       title: "Business Productivity",
       icon: Briefcase,
       brief: "Manage work tasks, attend meetings, and collaborate remotely.",
-      detailed: "Mobile productivity tools enable flexible work arrangements and efficient task management. Cloud-based document editing allows real-time collaboration, video conferencing supports remote meetings, and project management apps keep teams synchronized. Calendar integration ensures schedule coordination, email access maintains communication flow, and note-taking apps capture ideas instantly. Mobile banking and payment apps streamline financial transactions, while productivity metrics help optimize work efficiency."
+      detailed: "Mobile productivity tools enable flexible work with cloud-based editing, video conferencing, and project management. Calendar integration ensures coordination, while mobile banking streamlines financial transactions."
     },
     {
       id: "emergency",
       title: "Emergency Services",
       icon: Clock,
       brief: "Quick access to emergency services and safety features.",
-      detailed: "Emergency features in smartphones can be life-saving tools. One-touch emergency calling connects to local services instantly, location sharing helps rescuers find people quickly, and emergency contacts receive automatic notifications. Medical alert apps provide critical health information to first responders, while safety check-ins notify loved ones during travels. Weather alert systems warn of dangerous conditions, and emergency backup power modes extend battery life during crises."
+      detailed: "Emergency features provide life-saving tools with one-touch calling, location sharing for rescuers, and automatic notifications to contacts. Weather alerts warn of dangers, while backup power modes extend battery life during crises."
     }
   ];
 
@@ -75,9 +75,9 @@ export const PositiveUsesSection = () => {
             return (
               <Card
                 key={use.id}
-                className={`cursor-pointer transition-all duration-300 hover:shadow-elegant border-primary/20 bg-card/80 backdrop-blur-sm ${
+                className={`cursor-pointer transition-all duration-300 hover:shadow-elegant border-primary/20 bg-card/80 backdrop-blur-sm relative ${
                   isExpanded 
-                    ? 'scale-110 z-10 shadow-2xl' 
+                    ? 'transform scale-125 z-10 shadow-2xl' 
                     : 'hover:scale-105'
                 }`}
                 onClick={(e) => {
