@@ -96,22 +96,10 @@ export const NewsSection = () => {
                   {article.content}
                 </p>
                 
-                <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                <div className="pt-4 border-t border-border/50">
                   <span className="text-sm text-muted-foreground">
                     Source: {article.source}
                   </span>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className={`${
-                      article.type === 'positive' 
-                        ? 'border-primary text-primary hover:bg-primary hover:text-primary-foreground' 
-                        : 'border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground'
-                    }`}
-                  >
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    Read Full Article
-                  </Button>
                 </div>
               </CardContent>
             </Card>

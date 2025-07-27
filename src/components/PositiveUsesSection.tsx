@@ -21,13 +21,6 @@ export const PositiveUsesSection = () => {
       detailed: "GPS technology in smartphones has transformed how we navigate the world. Real-time traffic updates help avoid congestion, saving time and fuel. Location sharing ensures safety during travels, while offline maps work even without internet. Emergency services can locate people in distress, and ride-sharing apps have revolutionized transportation. Geofencing helps parents monitor children's whereabouts, and location-based services provide relevant local information and recommendations."
     },
     {
-      id: "photography",
-      title: "Digital Photography",
-      icon: Camera,
-      brief: "Capture and share life's precious moments with high-quality cameras.",
-      detailed: "Smartphone cameras have democratized photography, making it accessible to everyone. High-resolution sensors capture professional-quality images, while AI-enhanced features automatically optimize photos. Cloud storage preserves memories indefinitely, and instant sharing spreads joy to loved ones. Document scanning apps digitize important papers, QR code readers provide quick information access, and augmented reality filters create engaging content for social media and communication."
-    },
-    {
       id: "health",
       title: "Health Monitoring",
       icon: Heart,
@@ -40,20 +33,6 @@ export const PositiveUsesSection = () => {
       icon: Briefcase,
       brief: "Manage work tasks, attend meetings, and collaborate remotely.",
       detailed: "Mobile productivity tools enable flexible work arrangements and efficient task management. Cloud-based document editing allows real-time collaboration, video conferencing supports remote meetings, and project management apps keep teams synchronized. Calendar integration ensures schedule coordination, email access maintains communication flow, and note-taking apps capture ideas instantly. Mobile banking and payment apps streamline financial transactions, while productivity metrics help optimize work efficiency."
-    },
-    {
-      id: "education",
-      title: "Educational Access",
-      icon: GraduationCap,
-      brief: "Access unlimited learning resources and educational content.",
-      detailed: "Smartphones have democratized education by providing access to vast learning resources. Online courses offer skill development opportunities, language learning apps facilitate multilingual communication, and educational videos explain complex concepts visually. Digital libraries provide access to countless books and research papers, while study apps help organize learning schedules. Virtual field trips explore distant places, and educational games make learning engaging for children and adults alike."
-    },
-    {
-      id: "social",
-      title: "Social Connection",
-      icon: Users,
-      brief: "Build communities and maintain social relationships digitally.",
-      detailed: "Social networking apps help build and maintain meaningful relationships across distances. Community platforms connect people with shared interests, support groups provide emotional assistance, and professional networks facilitate career development. Social media keeps friends updated on life events, while dating apps help people find romantic connections. Online forums provide platforms for knowledge sharing, and social activism apps enable coordinated community action for positive change."
     },
     {
       id: "emergency",
@@ -96,10 +75,10 @@ export const PositiveUsesSection = () => {
             return (
               <Card
                 key={use.id}
-                className={`cursor-pointer transition-all duration-300 hover:shadow-elegant border-primary/20 ${
+                className={`cursor-pointer transition-all duration-300 hover:shadow-elegant border-primary/20 bg-card/80 backdrop-blur-sm ${
                   isExpanded 
-                    ? 'fixed inset-4 z-50 overflow-auto animate-zoom-in bg-card' 
-                    : 'hover:scale-105 bg-card/80 backdrop-blur-sm'
+                    ? 'scale-110 z-10 shadow-2xl' 
+                    : 'hover:scale-105'
                 }`}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -116,15 +95,9 @@ export const PositiveUsesSection = () => {
                 </CardHeader>
                 
                 <CardContent>
-                  <p className={`text-muted-foreground ${isExpanded ? 'text-lg leading-relaxed' : 'text-sm'} transition-all duration-300`}>
+                  <p className={`text-muted-foreground ${isExpanded ? 'text-lg leading-relaxed font-semibold' : 'text-sm'} transition-all duration-300`}>
                     {isExpanded ? use.detailed : use.brief}
                   </p>
-                  
-                  {!isExpanded && (
-                    <p className="text-xs text-primary mt-3 font-medium">
-                      Click to read more →
-                    </p>
-                  )}
                   
                   {isExpanded && (
                     <p className="text-sm text-primary mt-4 font-medium">

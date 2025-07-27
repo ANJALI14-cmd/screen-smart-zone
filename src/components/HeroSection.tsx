@@ -16,7 +16,7 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
         </div>
         
         <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-          Cell Phone: Friend or Foe?
+          Cell Phone: Blessing or Curse?
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
