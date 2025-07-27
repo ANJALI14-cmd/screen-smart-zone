@@ -1,13 +1,12 @@
 import { Smartphone, Zap, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
 }
-
-export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
-  return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
+export const HeroSection = ({
+  onNavigate
+}: HeroSectionProps) => {
+  return <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-primary opacity-5"></div>
       
       {/* Subtle tech animations in background */}
@@ -25,7 +24,7 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
           <Smartphone className="h-20 w-20 mx-auto text-primary mb-6" />
         </div>
         
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+        <h1 className="text-4xl mb-6 bg-gradient-primary bg-clip-text text-transparent py-[50px] my-[50px] px-0 font-bold mx-0 md:text-7xl">
           Cell Phone: Blessing or Curse?
         </h1>
         
@@ -35,21 +34,12 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button
-            size="lg"
-            onClick={() => onNavigate("positive")}
-            className="bg-gradient-primary hover:shadow-elegant transition-all duration-300 group"
-          >
+          <Button size="lg" onClick={() => onNavigate("positive")} className="bg-gradient-primary hover:shadow-elegant transition-all duration-300 group">
             <Zap className="mr-2 h-5 w-5 group-hover:animate-pulse" />
             Explore Benefits
           </Button>
           
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => onNavigate("negative")}
-            className="border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground transition-all duration-300 group"
-          >
+          <Button size="lg" variant="outline" onClick={() => onNavigate("negative")} className="border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground transition-all duration-300 group">
             <AlertTriangle className="mr-2 h-5 w-5 group-hover:animate-pulse" />
             Understand Risks
           </Button>
@@ -72,6 +62,5 @@ export const HeroSection = ({ onNavigate }: HeroSectionProps) => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
